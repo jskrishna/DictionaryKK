@@ -1,0 +1,40 @@
+﻿<ion-view hide-nav-bar="true">
+    <ion-content>
+        <div class="loginPage content padding">
+            <div class="mainHeadLogo">
+                <img src="img/logo.png" alt="Logo" />
+            </div>
+            <div class="signUp" style="margin-top:30%">
+                
+                    <div class="list">
+                        <div class="item item-input">
+                            <i class="icon placeholder-icon" ><img src="img/icon-email.png" alt="Email" /></i>
+                            <input type="email" placeholder="Email" ng-model="user.email" />
+                            <i ng-show="user.email!='' " class="icon placeholder-icon icon-cross"><img  src="img/icon-cross.png" alt="" data-ng-click="user.email=''" /></i>
+                            
+                        </div>
+                       
+                        <div class="item item-input">
+                            <i class="icon placeholder-icon"><img src="img/icon-pass.png" alt="Email" /></i>
+                            <input type="password" placeholder="Password" ng-model="user.pass">
+                            <i ng-show="user.pass!='' " class="icon placeholder-icon icon-cross"><img src="img/icon-cross.png" alt="" data-ng-click="user.pass=''"/></i>
+                        </div>
+                    </div>
+              
+                    <div class="btnSub">
+                        <button type="button" ui-sref="home" class="button button-block button-outline button-positive">Sign In</button>
+                    </div>
+               
+                <div class="createFor">
+                    <a ui-sref="register">Create an account</a>
+                    <a ui-sref="forgetpassword">Forgot password?</a>
+                  
+                </div>
+
+
+            </div>
+        </div>
+   
+
+   </ion-content>
+</ion-view>
