@@ -102,70 +102,70 @@ angular.module('DICTIONARY', ['ionic', 'main.controllers','ngAnimate', 'setting.
        url: '/training1',
 
        templateUrl: 'views/training1.html',
-       controller: 'trainingCtrl'
+       controller: 'trainingCtrl as trnctrl'
 
 
    }).state('training2', {
        url: '/training2',
 
        templateUrl: 'views/training2.html',
-
+       controller: 'trainingCtrl as trnctrl'
 
 
    }).state('training3', {
        url: '/training3',
 
        templateUrl: 'views/training3.html',
-
+       controller: 'trainingCtrl as trnctrl'
 
 
    }).state('training4', {
        url: '/training4',
 
        templateUrl: 'views/training4.html',
-
+       controller: 'trainingCtrl as trnctrl'
 
 
    }).state('training5', {
        url: '/training5',
 
        templateUrl: 'views/training5.html',
-
+       controller: 'trainingCtrl as trnctrl'
 
 
    }).state('training6', {
        url: '/training6',
 
        templateUrl: 'views/training6.html',
-
+       controller: 'trainingCtrl as trnctrl'
 
 
    }).state('training7', {
        url: '/training7',
 
        templateUrl: 'views/training7.html',
-
+       controller: 'trainingCtrl as trnctrl'
 
 
    }).state('training8', {
        url: '/training8',
 
        templateUrl: 'views/training8.html',
-
+       controller: 'trainingCtrl as trnctrl'
 
 
    }).state('training9', {
        url: '/training9',
 
        templateUrl: 'views/training9.html',
-
+       controller: 'trainingCtrl as trnctrl'
 
 
    }).state('training10', {
        url: '/training10',
 
-       templateUrl: 'views/training10.html',
-
+       templateUrl: 'views/training10.html ',
+       controller: 'trainingCtrl as trnctrl'
 
 
    })
@@ -198,7 +198,14 @@ angular.module('DICTIONARY', ['ionic', 'main.controllers','ngAnimate', 'setting.
       
   // })
   
-
-    $urlRouterProvider.otherwise('/login');
+    if (localStorage.getItem('training') == undefined || localStorage.getItem('training') == null) {
+      //  alert('train unde')
+        $urlRouterProvider.otherwise('/training1');
+    }
+    else {
+        //alert('train def')
+        $urlRouterProvider.otherwise('/login');
+    }
+    
 
 })

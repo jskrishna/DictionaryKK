@@ -246,6 +246,7 @@ margin-top: 32%;
     background: url(../images/icon-tab-5-hover.png);
     background-size: 29px !important;
 }
+
 .icon-acc a {
     background: url(../images/icon-email.png);
     background-size: 25px !important;
@@ -675,14 +676,59 @@ p.alphaType {
 
 
 .topPosbottom1 {
-    bottom: 123px;
+   bottom: 123px;
     position: absolute;
-    left: 20px;
+    left: 55px;
     max-width: 130px;
     text-align: center;
+    z-index: 9999;
+    color: #000;
 }
 .topPosbottom1:before {
-    background: url(../img/icon-arw-bottm.png) no-repeat center center;
+    background: url(../images/icon-arw-bottm.png) no-repeat center center;
+    content: "";
+    position: absolute;
+    height: 74px;
+    width: 50px;
+    bottom: -60px;
+    left: 99px;
+    right: 0;
+    margin: 0 auto;
+}
+.topPosbottom1-think{
+   bottom: 137px;
+    position: absolute;
+    /* left: 43px; */
+    right: 36px;
+    max-width: 130px;
+    text-align: center;
+    z-index: 9999;
+    color: #000;
+}
+.topPosbottom1-think:before{
+    background: url(../images/icon-arw-bottm.png) no-repeat center center;
+   content: "";
+    position: absolute;
+    height: 74px;
+    width: 50px;
+    bottom: -61px;
+    left: 98px;
+    right: 0;
+    margin: 0 auto;
+}
+.topPosbottom1-choclate{
+   bottom: 87px;
+    position: absolute;
+    /* left: 43px; */
+    right: 50%;
+    margin: 0;
+    max-width: 130px;
+    text-align: center;
+    z-index: 9999;
+    color: #000;
+}
+.topPosbottom1-choclate:before{
+    background: url(../images/icon-arw-bottm.png) no-repeat center center;
     content: "";
     position: absolute;
     height: 74px;
@@ -692,25 +738,137 @@ p.alphaType {
     right: 0;
     margin: 0 auto;
 }
-.topPosbottom2 {
-    bottom: 125px;
+.topPosbottom1-setting{
+   bottom: 87px;
     position: absolute;
-    right: 0;
-    max-width: 142px;
+    /* left: 43px; */
+   right:  35%;;
+    max-width: 130px;
     text-align: center;
-    left: 0;
-    margin: 0 auto;
+    z-index: 9999;
+    color: #000;
 }
-.topPosbottom2:before {
-    background: url(../img/icon-arw-bottm-left.png) no-repeat center center;
+.topPosbottom1-setting:before{
+    background: url(../images/icon-arw-bottm.png) no-repeat center center;
     content: "";
     position: absolute;
     height: 74px;
     width: 50px;
     bottom: -50px;
-    right: -60px;
+    left: 120px;
+    right: 0;
     margin: 0 auto;
 }
+.topPosbottom1-account{
+   bottom: 99px;
+    position: absolute;
+    /* left: 43px; */
+    right: 17%;
+    max-width: 130px;
+    text-align: center;
+    z-index: 9999;
+    color: #000;
+}
+.topPosbottom1-account:before{
+    background: url(../images/icon-arw-bottm.png) no-repeat center center;
+   content: "";
+    position: absolute;
+    height: 74px;
+    width: 50px;
+    bottom: -62px;
+    left: 90px;
+    right: 0;
+    margin: 0 auto;
+}.topPosbottom1-back{
+  position: absolute;
+    left: 38%;
+    right: 0;
+    text-align: center;
+    max-width: 125px;
+    top: 114px;
+    /* margin: 0; */
+    z-index: 9999;
+    color: #000;
+}
+.topPosbottom1-back:before{
+   background: url(../images/icon-arw-bottm-left.png) no-repeat center center;
+   content: "";
+    position: absolute;
+    height: 70px;
+    width: 50px;
+    top: -83px;
+    transform: rotate(156deg);
+    left: 29px;
+}
+
+
+.topPosbottom2 {
+   bottom: 95px;
+    position: absolute;
+    right: 0;
+    max-width: 172px;
+    text-align: center;
+    left: 20px;
+    margin:0px;
+    z-index: 9999;
+    color: #000;
+}
+.topPosbottom2:before {
+    background: url(../images/icon-arw-bottm-left.png) no-repeat center center;
+ content: "";
+    position: absolute;
+    height: 74px;
+    width: 50px;
+    left: 5px;
+    bottom: -58px;
+    /* right: -60px; */
+    /* margin: 0 auto; */
+}
+.topPosbottom2-web {
+   bottom: 95px;
+    position: absolute;
+    right: 0;
+    max-width: 172px;
+    text-align: center;
+    left: 19%;
+   margin:0px;
+    z-index: 9999;
+    color: #000;
+}
+.topPosbottom2-web:before {
+    background: url(../images/icon-arw-bottm-left.png) no-repeat center center;
+   content: "";
+    position: absolute;
+    height: 74px;
+    width: 50px;
+    left: -2px;
+    bottom: -58px;
+    /* right: -60px; */
+    /* margin: 0 auto; */
+}
+.topPosbottom2-bag {
+   bottom: 103px;
+    position: absolute;
+    right: 0;
+    max-width: 187px;
+    text-align: center;
+    left: 36%;
+    margin: 0;
+    z-index: 9999;
+    color: #000;
+}
+.topPosbottom2-bag:before {
+    background: url(../images/icon-arw-bottm-left.png) no-repeat center center;
+  content: "";
+    position: absolute;
+    height: 74px;
+    width: 50px;
+    left: -1px;
+    bottom: -65px;
+    /* right: -60px; */
+    /* margin: 0 auto; */
+}
+
 .topPosbottom3 {
     bottom: 125px;
     position: absolute;
@@ -718,9 +876,11 @@ p.alphaType {
     text-align: center;
     left: 40px;
     margin: 0;
+     z-index: 9999;
+    color: #000;
 }
 .topPosbottom3:before {
-    background: url(../img/icon-arw-bottm-left.png) no-repeat center center;
+    background: url(../images/icon-arw-bottm-left.png) no-repeat center center;
     content: "";
     position: absolute;
     height: 74px;
@@ -737,9 +897,11 @@ p.alphaType {
     text-align: center;
     left: 40px;
     margin: 0;
+     z-index: 9999;
+    color: #000;
 }
 .topPosbottom4:before {
-    background: url(../img/icon-arw-bottm-left.png) no-repeat center center;
+    background: url(../images/icon-arw-bottm-left.png) no-repeat center center;
     content: "";
     position: absolute;
     height: 74px;
@@ -759,4 +921,18 @@ p.alphaType {
     background: rgba(242,242,242,0.8);
     height: 100vh;
     z-index: 997;
+}
+
+.start-train{
+    position: absolute;
+    
+    font-size: 16px;
+    text-align: center;
+    max-width: 164px;
+   right: 25%;
+   top:40%;
+    left: 25%;
+    margin: auto;
+    z-index: 9999;
+    color: #000;
 }

@@ -94,16 +94,16 @@
           </ion-nav-view>
 
       </ion-pane>
-      <div class="trainOne">
+      <div class="trainOne" ng-show="training">
         
-          <div class="topPos">
-        <p>Use this<br>when you want to search words by letter.</p>
-        <span class="naviGate">Next</span>
+          <div class="{{position}}" id="trainId">
+        <p ng-bind-html="posText"></p>
+        <span class="naviGate" ng-click="goToTrain()">Next</span>
     </div>
       
 
       </div>
-      <div class="overlay"></div>
+      <div class="overlay" ng-show="training"></div>
       <ion-footer-bar class="bar-clear cusFooter" ng-show="location">
           <div class="bar bar-footer item-input-inset customSearch">
               <div class="item-input-inset">
@@ -111,6 +111,7 @@
                       <input type="search" placeholder="Click here to search for a word">
                   </label>
                   <button class="button button-clear icon-search"></button>
+
                   <button class="button button-clear icon-info"></button>
               </div>
           </div>
