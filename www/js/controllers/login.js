@@ -5,8 +5,21 @@
     // $rootScope.val = 'novalueset';
    // alert();
     $scope.user = { email: '', pass: '' };
+
+    $scope.signIn = function () {
+
+        if (localStorage.getItem('training') == undefined || localStorage.getItem('training') == null) {
+            //  alert('train unde')
+            $state.go('training1');
+        }
+        else {
+            //alert('train def')
+            $state.go('home');
+        }
+    }
+
     $scope.clearField = function () {
-        alert();
+       
         $scope.user[property] = '';
     }
     $rootScope.location = false;
