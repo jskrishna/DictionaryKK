@@ -1,7 +1,8 @@
-﻿<ion-view hide-back-buton="true">
+﻿<ion-view>
+    <div class="bkBtn item-divider" style="color:white" ng-show="(details=='detail')?true:false" ng-click="detailsVar('nodetail')"><i class="ion-chevron-left"></i>&nbsp; back to the word list</div>
    
-    <ion-content class="has-header has-footer">
-       
+     <ion-content class="has-header has-footer" style="top:153px">
+      
         <div class="mainCnt" ng-show="(details!='detail')?true:false" >
             <div class="mainCntInr">
                 <div class="innerWid">
@@ -14,7 +15,7 @@
                     </div>
                     <div class="alphaBateList">
                         <div class="seachRes">
-                            <span class="seachList" ng-click="details='detail'">Apple</span>
+                            <span class="seachList" ng-click="detailsVar('detail')">Apple</span>
                             <button class="icon-speaker icon-small">
                                 <img src="images/icon-speaker.png" alt="">
                             </button>
@@ -32,56 +33,106 @@
                                 <p class="meanDesc">
                                     1) A round fruit of a tree of the rose family, which typically has thin red or green skin and crisp flesh. Many varieties have been developed as dessert or cooking fruit or for making cider.
                                 </p>
-                                <span class="alphaDefina mbTop">
-                                Synonyms:
-                                </span>
-                                 <div class="row fW300">
-                                    <div class="col">Word 1</div>
-                                    <div class="col">Word 2</div>
-                                    <div class="col">Word 3</div>
-                                </div>
+                                
+                                
                                 <img src="images/icon-apple.png" alt="" />
                             </div>
                             <div class="slctAlphaDetails">
                                 <p class="meanDesc">
                                     2) A round fruit of a tree of the rose family, which typically has thin red or green skin and crisp flesh. Many varieties have been developed as dessert or cooking fruit or for making cider.
                                 </p>
-                                <span class="alphaDefina mbTop">
-                                Synonyms:
-                                </span>
-                                 <div class="row fW300">
-                                    <div class="col">Word 1</div>
-                                    <div class="col">Word 2</div>
-                                    <div class="col">Word 3</div>
-                                </div>
+                                
+                               
                                 <img src="images/icon-apple.png" alt="" />
                             </div>
                             <div class="slctAlphaDetails">
                                 <p class="meanDesc">
                                     3) A round fruit of a tree of the rose family, which typically has thin red or green skin and crisp flesh. Many varieties have been developed as dessert or cooking fruit or for making cider.
                                 </p>
-                                <span class="alphaDefina mbTop">
-                                Synonyms:
-                                </span>
-                                 <div class="row fW300">
-                                    <div class="col">Word 1</div>
-                                    <div class="col">Word 2</div>
-                                    <div class="col">Word 3</div>
-                                </div>
+
                                 <img src="images/icon-apple.png" alt="" />
+                            </div>
+                                <span class="alphaDefina mbTop">
+                                    Synonyms:
+                                </span>
+                                <div class="row fW300">
+                                    <div class="col text-right">Word 1</div>
+                                    <div class="col col-20">Word 2</div>
+                                    <div class="col text-left">Word 3</div>
+                                </div>
+                                <div class="row fW300">
+                                    <div class="col text-right">Word 1</div>
+                                    <div class="col col-20">Word 2</div>
+                                    <div class="col text-left">Word 3</div>
+                               
                             </div>
                         </div>
                     </div>
-                 
+                    <div class="sepRator"></div>
+                    <div class="alphaBateList">
+                        <div class="seachRes">
+                            <span class="seachList" ng-click="detailsVar('detail')">Apple</span>
+                            <button class="icon-speaker icon-small">
+                                <img src="images/icon-speaker.png" alt="">
+                            </button>
+                            <span class="alphaType">noun</span>
+                            <div class="learnMore">Click me to learn more!</div>
+                        </div>
+                        <div class="resOtherList">
+                            <p class="alphaTitle">
+                                Syllables:<span class="alphaMean">&nbsp;Ap<small>.</small>ple</span>
+                            </p>
+                            <span class="alphaDefina">
+                                Definitions:
+                            </span>
+                            <div class="slctAlphaDetails">
+                                <p class="meanDesc">
+                                    1) A round fruit of a tree of the rose family, which typically has thin red or green skin and crisp flesh. Many varieties have been developed as dessert or cooking fruit or for making cider.
+                                </p>
+
+
+                                <img src="images/icon-apple.png" alt="" />
+                            </div>
+                            <div class="slctAlphaDetails">
+                                <p class="meanDesc">
+                                    2) A round fruit of a tree of the rose family, which typically has thin red or green skin and crisp flesh. Many varieties have been developed as dessert or cooking fruit or for making cider.
+                                </p>
+
+
+                                <img src="images/icon-apple.png" alt="" />
+                            </div>
+                            <div class="slctAlphaDetails">
+                                <p class="meanDesc">
+                                    3) A round fruit of a tree of the rose family, which typically has thin red or green skin and crisp flesh. Many varieties have been developed as dessert or cooking fruit or for making cider.
+                                </p>
+
+                                <img src="images/icon-apple.png" alt="" />
+                            </div>
+                            <span class="alphaDefina mbTop">
+                                Synonyms:
+                            </span>
+                            <div class="row fW300">
+                                <div class="col text-right">Word 1</div>
+                                <div class="col col-20">Word 2</div>
+                                <div class="col text-left">Word 3</div>
+                            </div>
+                            <div class="row fW300">
+                                <div class="col text-right">Word 1</div>
+                                <div class="col col-20">Word 2</div>
+                                <div class="col text-left">Word 3</div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="mainCnt" ng-show="(details=='detail')?true:false">
-            <div class="bkBtn item-divider" ng-click="details='nodetail'"><i class="ion-chevron-left"></i>&nbsp; back to the word list</div>
+           
             <div class="mainCntInr">
                
                 <div class="innerWid">
-                    <div class="searchAlpha">
+                    <div class="searchAlpha" style="margin-top: 56px;">
                         <span class="alphaBate colorDiff">Apple</span>
                         <button class="icon-speaker">
                             <img src="images/icon-speaker.png" alt="">
@@ -96,105 +147,105 @@
                             <div class="sepRator"></div>
                         </div>
                         <div class="resOtherList">
-                            <p class="meanWrd">
-                                The meaning (Definition) of the word <span>Apple</span>
+                            <p class="meanWrd font-size">
+                                The meaning (definition) of the word <span>Apple</span>
                             </p>
                             <div class="slctAlphaDetails">
-                                <p class="meanDesc">
+                                <p class="meanWrd font-size">
                                     1) A round fruit of a tree of the rose family, which typically has thin red or green skin and crisp flesh. Many varieties have been developed as dessert or cooking fruit or for making cider.
                                 </p>
                                 <img src="images/icon-apple.png" alt="" />
                             </div>
                             <div class="slctAlphaDetails">
-                                <p class="meanDesc">
+                                <p class="meanDesc font-size">
                                     2) A round fruit of a tree of the rose family, which typically has thin red or green skin and crisp flesh. Many varieties have been developed as dessert or cooking fruit or for making cider.
                                 </p>
                                 <img src="images/icon-apple.png" alt="" />
                             </div>
                             <div class="slctAlphaDetails">
-                                <p class="meanDesc">
+                                <p class="meanDesc font-size">
                                     3) A round fruit of a tree of the rose family, which typically has thin red or green skin and crisp flesh. Many varieties have been developed as dessert or cooking fruit or for making cider.
                                 </p>
                                 <img src="images/icon-apple.png" alt="" />
                             </div>
                          <div class="sepRator"></div>
                          <div class="slctAlphaDetails">
-                             <p class="meanWrd">
+                             <p class="meanWrd font-size">
                                     The word <span>Apple</span> used in a sentence
                              </p>
-                            <p class="meanDesc">
+                            <p class="meanDesc font-size font-size">
                                 1) The Little Wordsmiths love having an <span class="colorOrg">apple</span> as a snack in their lunch boxes.
                             </p>
-                            <p class="meanDesc">
+                            <p class="meanDesc font-size">
                                 2) The Little Wordsmiths love having an <span class="colorOrg">apple</span> as a snack in their lunch boxes.
                             </p>
-                            <p class="meanDesc">
+                            <p class="meanDesc font-size">
                                 3) The Little Wordsmiths love having an <span class="colorOrg">apple</span> as a snack in their lunch boxes.
                             </p>
                         </div>
                         <div class="sepRator"></div>
                         <div class="slctAlphaDetails">
-                             <p class="meanWrd">
+                             <p class="meanWrd font-size">
                                     Words that mean the same as <span class="colorYell">Apple</span> (Synonyms):
                              </p>
                            <div class="row fW300">
-                                <div class="col">Word 1</div>
-                                <div class="col">Word 2</div>
-                                <div class="col">Word 3</div>
+                               <div class="col text-right">Word 1</div>
+                               <div class="col col-20">Word 2</div>
+                               <div class="col text-left">Word 3</div>
                             </div>
                             <div class="row fW300">
-                                <div class="col">Word 4</div>
-                                <div class="col">Word 5</div>
-                                <div class="col">Word 6</div>
+                                <div class="col text-right">Word 1</div>
+                                <div class="col col-20">Word 2</div>
+                                <div class="col text-left">Word 3</div>
                             </div>
                             <div class="row fW300">
-                                <div class="col">Word 7</div>
-                                <div class="col">Word 8</div>
-                                <div class="col">Word 9</div>
+                                <div class="col text-right">Word 1</div>
+                                <div class="col col-20">Word 2</div>
+                                <div class="col text-left">Word 3</div>
                             </div>
                         </div>
                         <div class="sepRator"></div>
                         <div class="slctAlphaDetails">
-                             <p class="meanWrd">
+                             <p class="meanWrd font-size">
                                 Words that mean the opposite of <span class="colorGreen">Apple</span> (Antonyms):
                              </p>
                            <div class="row fW300">
-                                <div class="col">Word 1</div>
-                                <div class="col">Word 2</div>
-                                <div class="col">Word 3</div>
+                               <div class="col text-right">Word 1</div>
+                               <div class="col col-20">Word 2</div>
+                               <div class="col text-left">Word 3</div>
                             </div>
                             <div class="row fW300">
-                                <div class="col">Word 4</div>
-                                <div class="col">Word 5</div>
-                                <div class="col">Word 6</div>
+                                <div class="col text-right">Word 1</div>
+                                <div class="col col-20">Word 2</div>
+                                <div class="col text-left">Word 3</div>
                             </div>
                             <div class="row fW300">
-                                <div class="col">Word 7</div>
-                                <div class="col">Word 8</div>
-                                <div class="col">Word 9</div>
+                                <div class="col text-right">Word 1</div>
+                                <div class="col col-20">Word 2</div>
+                                <div class="col text-left">Word 3</div>
                             </div>
                         </div>
                         <div class="sepRator"></div>
                         <div class="slctAlphaDetails">
-                             <p class="meanWrd">
+                             <p class="meanWrd font-size">
                                 The plural word for <span class="colorRed">Apple</span> is:
                              </p>
                            <span class="singTxt">Apples</span>
                         </div>
                         <div class="sepRator"></div>
                         <div class="slctAlphaDetails">
-                             <p class="meanWrd">
+                             <p class="meanWrd font-size">
                                 Other words that come from the word <span class="colorMaroon">Apple</span>  (Derivatives):
                              </p>
                            <div class="row fW300">
-                                <div class="col">Word 1</div>
-                                <div class="col">Word 2</div>
-                                <div class="col">Word 3</div>
+                               <div class="col text-right">Word 1</div>
+                               <div class="col col-20">Word 2</div>
+                               <div class="col text-left">Word 3</div>
                             </div>
                         </div>
                         <div class="sepRator"></div>
                         <div class="slctAlphaDetails allLang">
-                             <p class="meanWrd">
+                             <p class="meanWrd font-size">
                                 How the word <span class="colorMaroon">Apple</span> is said around the world:
                              </p>
                            <div class="row fW300">

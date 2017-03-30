@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('DICTIONARY', ['ionic', 'main.controllers','ngAnimate', 'setting.controllers', 'about.controllers',
+angular.module('DICTIONARY', ['ionic', 'main.controllers', 'ngAnimate','ionic-native-transitions', 'termCondi.controllers', 'setting.controllers', 'about.controllers',
     'website.controllers', 'store.controllers', 'thesaurus.controllers',
     'account.controllers', 'login.controllers','training.controllers','forgetpassword.controllers', 'register.controllers','home.controllers'])
 
@@ -13,7 +13,7 @@ angular.module('DICTIONARY', ['ionic', 'main.controllers','ngAnimate', 'setting.
     if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    //  cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
 
       // Don't remove this line unless you know what you are doing. It stops the viewport
       // from snapping when text inputs are focused. Ionic handles this internally for
@@ -24,9 +24,27 @@ angular.module('DICTIONARY', ['ionic', 'main.controllers','ngAnimate', 'setting.
       StatusBar.styleDefault();
     }
   });
-}).config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+}).config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider, $ionicNativeTransitionsProvider) {
     $ionicConfigProvider.tabs.position('bottom'); $ionicConfigProvider.navBar.alignTitle('center');
     $ionicConfigProvider.form.checkbox('square'); $ionicConfigProvider.views.maxCache(0);
+    $ionicNativeTransitionsProvider.setDefaultOptions({
+        duration: 400, // in milliseconds (ms), default 400, 
+        slowdownfactor: 4, // overlap views (higher number is more) or no overlap (1), default 4 
+        iosdelay: -1, // ms to wait for the iOS webview to update before animation kicks in, default -1 
+        androiddelay: -1, // same as above but for Android, default -1 
+        winphonedelay: -1, // same as above but for Windows Phone, default -1, 
+        fixedPixelsTop: 0, // the number of pixels of your fixed header, default 0 (iOS and Android) 
+        fixedPixelsBottom: 0, // the number of pixels of your fixed footer (f.i. a tab bar), default 0 (iOS and Android) 
+        triggerTransitionEvent: '$ionicView.afterEnter', // internal ionic-native-transitions option 
+        backInOppositeDirection: false // Takes over default back transition and state back transition to use the opposite direction transition to go back 
+    });
+    $ionicNativeTransitionsProvider.setDefaultTransition({
+        
+    "type": "fade",
+    "duration":  1000, // in milliseconds (ms), default 400 
+        
+    });
+   
     $ionicConfigProvider.views.transition('none');
  
     $stateProvider
@@ -105,11 +123,11 @@ angular.module('DICTIONARY', ['ionic', 'main.controllers','ngAnimate', 'setting.
        controller: 'trainingCtrl as trnctrl'
 
 
-   }).state('training2', {
-       url: '/training2',
+   }).state('termCondi', {
+       url: '/termCondi',
 
-       templateUrl: 'views/training2.html',
-       controller: 'trainingCtrl as trnctrl'
+       templateUrl: 'templates/termCondi.html',
+       controller: 'termCondiCtrl'
 
 
    }).state('training3', {
@@ -198,14 +216,10 @@ angular.module('DICTIONARY', ['ionic', 'main.controllers','ngAnimate', 'setting.
       
   // })
   
-    if (localStorage.getItem('training') == undefined || localStorage.getItem('training') == null) {
-      //  alert('train unde')
-        $urlRouterProvider.otherwise('/training1');
-    }
-    else {
+    
         //alert('train def')
         $urlRouterProvider.otherwise('/login');
-    }
+    
     
 
 })

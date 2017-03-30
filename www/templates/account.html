@@ -35,13 +35,13 @@
         <div class="mainCnt padding">
             <div class="mainCntInner">
                 <button class="btnEdit btnLoug" ui-sref="login">Log out</button>
-                <div class="innerWid">
+                <div class="innerWid editPro">
                     <div class="signUp">
                       
                       
                         <div class="list editList">
                            
-                            <label class="item item-input">
+                            <label class="item item-input" >
                                 <i class="icon placeholder-icon"><img src="img/icon-email.png" alt="Email" /></i>
                                 <input type="text" placeholder="First Name" ng-model="user.fname">
                                 <i class="icon placeholder-icon icon-cross">Edit</i>
@@ -61,21 +61,14 @@
                                 <input type="password" placeholder="Password" ng-model="user.pass">
                                 <i class="icon placeholder-icon icon-cross">Change</i>
                             </label>
-                            <label class="item item-input">
+                            <div class="item item-input">
                                 <i class="icon placeholder-icon"><img src="img/icon-globe.png" alt="Email" /></i>
-                                <!--<div class="input-label">
-                                    Country
-                                </div>
-                                <select>
+                                <select class="select-item">
                                     <option>Canada</option>
                                     <option selected>India</option>
-                                    <option>America</option>
-                                 
-                                </select>-->
-                               
-                            <input type="text" placeholder="Country" ng-model="user.country">
-                                <i class="icon placeholder-icon">Change</i>
-                            </label>
+                                    <option>USA</option>
+                                </select>
+                            </div>
                         </div>
 
 

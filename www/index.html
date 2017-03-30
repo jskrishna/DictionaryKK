@@ -40,10 +40,12 @@
       <script src="js/controllers/register.js"></script>
       <script src="js/controllers/setting.js"></script>
       <script src="js/controllers/store.js"></script>
+      <script src="lib/ionic-native-transitions/dist/ionic-native-transitions.js"></script>
       <script src="js/controllers/main.js"></script>
       <script src="js/controllers/thesaurus.js"></script>
       <script src="js/controllers/website.js"></script>
       <script src="js/controllers/training.js"></script>
+      <script src="js/controllers/termCondi.js"></script>
   </head>
   <body ng-app="DICTIONARY" ng-controller="mainCtrl">
       <ion-nav-bar>
@@ -56,38 +58,39 @@
           </ion-nav-back-button>-->
          
       </ion-nav-bar>
-      
+      <div style="position:absolute;top:45px">
           <ion-scroll direction="x" ng-show="location" class="ng-abcd">
-              <div id="content">
-                  <div class="alphaItems item" style="font-size:20px;color:#f0602e">aA</div>
-                  <div class="alphaItems item" style="font-size:20px">bB</div>
-                  <div class="alphaItems item" style="font-size:20px">cC</div>
-                  <div class="alphaItems item" style="font-size:20px">dD</div>
-                  <div class="alphaItems item" style="font-size:20px">eE</div>
-                  <div class="alphaItems item" style="font-size:20px">fF</div>
-                  <div class="alphaItems item" style="font-size:20px">gG</div>
-                  <div class="alphaItems item" style="font-size:20px">hH</div>
-                  <div class="alphaItems item" style="font-size:20px">iI</div>
-                  <div class="alphaItems item" style="font-size:20px">jJ</div>
-                  <div class="alphaItems item" style="font-size:20px">kK</div>
-                  <div class="alphaItems item" style="font-size:20px">lL</div>
-                  <div class="alphaItems item" style="font-size:20px">mM</div>
-                  <div class="alphaItems item" style="font-size:20px">nN</div>
-                  <div class="alphaItems item" style="font-size:20px">oO</div>
-                  <div class="alphaItems item" style="font-size:20px">pP</div>
-                  <div class="alphaItems item" style="font-size:20px">qQ</div>
-                  <div class="alphaItems item" style="font-size:20px">rR</div>
-                  <div class="alphaItems item" style="font-size:20px">sS</div>
-                  <div class="alphaItems item" style="font-size:20px">tT</div>
-                  <div class="alphaItems item" style="font-size:20px">uU</div>
-                  <div class="alphaItems item" style="font-size:20px">vV</div>
-                  <div class="alphaItems item" style="font-size:20px">wW</div>
-                  <div class="alphaItems item" style="font-size:20px">xX</div>
-                  <div class="alphaItems item" style="font-size:20px">yY</div>
-                  <div class="alphaItems item" style="font-size:20px">zZ</div>
-
+              <div class="row" id="content">
+                  <div class="alphaItems animate item" style="font-size:20px;color:#f0602e">aA</div>
+                  <div class="alphaItems animate item animate" style="font-size:20px">bB</div>
+                  <div class="alphaItems animate item" style="font-size:20px">cC</div>
+                  <div class="alphaItems animate item" style="font-size:20px">dD</div>
+                  <div class="alphaItems animate item" style="font-size:20px">eE</div>
+                  <div class="alphaItems animate item" style="font-size:20px">fF</div>
+                  <div class="alphaItems animate item" style="font-size:20px">gG</div>
+                  <div class="alphaItems animate item" style="font-size:20px">hH</div>
+                  <div class="alphaItems animate item" style="font-size:20px">iI</div>
+                  <div class="alphaItems animate item" style="font-size:20px">jJ</div>
+                  <div class="alphaItems animate item" style="font-size:20px">kK</div>
+                  <div class="alphaItems animate item" style="font-size:20px">lL</div>
+                  <div class="alphaItems animate item" style="font-size:20px">mM</div>
+                  <div class="alphaItems animate item" style="font-size:20px">nN</div>
+                  <div class="alphaItems animate item" style="font-size:20px">oO</div>
+                  <div class="alphaItems animate item" style="font-size:20px">pP</div>
+                  <div class="alphaItems animate item" style="font-size:20px">qQ</div>
+                  <div class="alphaItems animate item" style="font-size:20px">rR</div>
+                  <div class="alphaItems animate item" style="font-size:20px">sS</div>
+                  <div class="alphaItems animate item" style="font-size:20px">tT</div>
+                  <div class="alphaItems animate item" style="font-size:20px">uU</div>
+                  <div class="alphaItems animate item" style="font-size:20px">vV</div>
+                  <div class="alphaItems animate item" style="font-size:20px">wW</div>
+                  <div class="alphaItems animate item" style="font-size:20px">xX</div>
+                  <div class="alphaItems animate item" style="font-size:20px">yY</div>
+                  <div class="alphaItems animate item" style="font-size:20px">zZ</div>
               </div>
           </ion-scroll>
+      </div>
+          
      
       <ion-pane>
           <ion-nav-view>
@@ -104,25 +107,33 @@
 
       </div>
       <div class="overlay" ng-show="training"></div>
-      <ion-footer-bar class="bar-clear cusFooter" ng-show="location">
+      <ion-footer-bar class="bar-clear cusFooter" ng-show="location" keyboard-attach="">
           <div class="bar bar-footer item-input-inset customSearch">
-              <div class="item-input-inset">
-                  <label class="item-input-wrapper">
-                      <input type="search" placeholder="Click here to search for a word">
-                  </label>
-                  <button class="button button-clear icon-search"></button>
+              <div class="row">
+                  <div class="col col-80 col-cust-search back-white" id="divBack">
+                      <input type="search" ng-model="user.search" ng-init="user.search=''" class="srch-clr" placeholder="Click here to search for a word">
+                      <i ng-show="user.search!='' " style="margin-right: 19px;" class="icon placeholder-icon icon-cross cross-custom">
+                      <img src="img/icon-cross.png" alt="" data-ng-click="user.search=''"></i>
+                  </div>
+                  <div class="col col-20 col-cust" style="padding-top: 3px;">
+                      <button class="button button-clear icon-search button-icon" ng-class="(user.search!='')?'icon-search-hover':'icon-search'"></button>
+                  </div>
+                <div class="col col-20 col-cust" style="padding-top: 3px;">
+                    <button class="button button-clear icon-info"></button>
+                </div>
 
-                  <button class="button button-clear icon-info"></button>
+                  
               </div>
           </div>
-      <ul class="customTab">
-          <li ui-sref="home" ng-click="val='active5'" class="" ng-class="(val=='active5')?'icon-thesa-hover':'icon-thesa'"><a href="javascript:void(0)"></a></li>
-          <li ui-sref="website" ng-click="val='active3'" class="" ng-class="(val=='active3')?'icon-web-hover':'icon-web'"><a href="javascript:void(0)"></a></li>
-          <li ui-sref="store" ng-click="val='active4'" class="" ng-class="(val=='active4')?'icon-store-hover':'icon-store'"><a href="javascript:void(0)"></a></li>
-          <li ui-sref="about" ng-click="val='active2'" class="" ng-class="(val=='active2')?'icon-about-hover':'icon-about'"><a href="javascript:void(0)"></a></li>
-        <li ui-sref="setting" ng-click="val='active1'" ng-class="(val=='active1')?'icon-setting-hover':'icon-setting'"><a href="javascript:void(0)"></a></li>
-        <li ui-sref="account" ng-click="val='active6'" class="" ng-class="(val=='active6')?'icon-acc-hover':'icon-acc'"><a href="javascript:void(0)"></a></li>
-      </ul>  
+          
+      <div class="customTab row">
+          <div ui-sref="home" ng-click="val='active5'" class="col col-20 col-cust" ng-class="(val=='active5')?'icon-thesa-hover':'icon-thesa'"><a href="javascript:void(0)"></a></div>
+          <div ui-sref="website" ng-click="val='active3'" class="col col-20 col-cust" ng-class="(val=='active3')?'icon-web-hover':'icon-web'"><a href="javascript:void(0)"></a></div>
+          <div ui-sref="store" ng-click="val='active4'" class="col col-20 col-cust" ng-class="(val=='active4')?'icon-store-hover':'icon-store'"><a href="javascript:void(0)"></a></div>
+          <div ui-sref="about" ng-click="val='active2'" class="col col-20 col-cust" ng-class="(val=='active2')?'icon-about-hover':'icon-about'"><a href="javascript:void(0)"></a></div>
+        <div ui-sref="setting" ng-click="val='active1'" class="col col-20 col-cust" ng-class="(val=='active1')?'icon-setting-hover':'icon-setting'"><a href="javascript:void(0)"></a></div>
+        <div ui-sref="account" ng-click="val='active6'" class="col col-20 col-cust" ng-class="(val=='active6')?'icon-acc-hover':'icon-acc'"><a href="javascript:void(0)"></a></div>
+      </div>  
       </ion-footer-bar>
   </body>
 </html>
