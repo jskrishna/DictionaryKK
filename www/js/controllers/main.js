@@ -109,6 +109,7 @@
            // $state.go('login');
         }
         else if (location == 'training11') {
+			
             $scope.position = 'topPosbottom1-back';
             $rootScope.val = 'active11';
             $scope.posText = "Tapping on the logo<br> will bring you back to<br> the homescreen";
